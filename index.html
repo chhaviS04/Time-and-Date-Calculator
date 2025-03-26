@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Date and Time Calculator</title>
-  <link rel="stylesheet" href="" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -17,36 +17,40 @@
 
     <!-- Content Section -->
     <div class="content">
+      <!-- Date Difference Section -->
       <div class="card">
         <h2>📅 Calculate Date or Age Difference</h2>
         <label for="startDate">Start Date:</label>
         <input type="date" id="startDate" />
         <label for="endDate">End Date (optional):</label>
         <input type="date" id="endDate" />
-        <button onclick="">Calculate Difference</button>
+        <button onclick="calculateDifference()">Calculate Difference</button>
         <p id="differenceResult"></p>
       </div>
 
+      <!-- Future or Past Date Section -->
       <div class="card">
         <h2>⏳ Future/Past Date Calculator</h2>
         <label for="baseDate">Select Date:</label>
         <input type="date" id="baseDate" />
         <label for="daysToAdd">Days to Add/Subtract:</label>
         <input type="number" id="daysToAdd" placeholder="Enter days" />
-        <button onclick="">Calculate Date</button>
+        <button onclick="calculateFutureDate()">Calculate Date</button>
         <p id="futureDateResult"></p>
       </div>
 
+      <!-- Time Difference Section -->
       <div class="card">
         <h2>⏰ Calculate Time Difference</h2>
         <label for="startTime">Start Time:</label>
         <input type="time" id="startTime" />
         <label for="endTime">End Time:</label>
         <input type="time" id="endTime" />
-        <button onclick="">Calculate Time Difference</button>
+        <button onclick="calculateTimeDifference()">Calculate Time Difference</button>
         <p id="timeDifferenceResult"></p>
       </div>
 
+      <!-- Time Zone Conversion -->
       <div class="card">
         <h2>🌐 Time Zone Converter</h2>
         <label for="timeZone">Select Time Zone:</label>
@@ -56,19 +60,21 @@
           <option value="Asia/Kolkata">India (IST)</option>
           <option value="Europe/London">London (GMT)</option>
         </select>
-        <button onclick="">Convert Time Zone</button>
+        <button onclick="convertTimeZone()">Convert Time Zone</button>
         <p id="timeZoneResult"></p>
       </div>
 
+      <!-- Countdown Timer -->
       <div class="card">
         <h2>⏳ Countdown Timer</h2>
         <label for="countdownDate">Set Countdown Date:</label>
         <input type="datetime-local" id="countdownDate" />
-        <button onclick="">Start Countdown</button>
+        <button onclick="startCountdown()">Start Countdown</button>
         <p id="countdownResult"></p>
       </div>
     </div>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
