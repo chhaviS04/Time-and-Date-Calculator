@@ -12,6 +12,17 @@ function updateDateTime() {
 // Automatically update the time every second
 setInterval(updateDateTime, 1000);
 
+// Function to display the current time
+function updateCurrentTime() {
+  const currentTimeElement = document.getElementById('currentTimeDisplay');
+  const now = new Date();
+  const formattedTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  currentTimeElement.textContent = formattedTime;
+}
+
+// Update the time every second
+setInterval(updateCurrentTime, 1000);
+updateCurrentTime(); // Initial call
 
 // Calculate Difference Between Two Dates
 function calculateDifference() {
@@ -129,4 +140,3 @@ function startCountdown() {
     ).innerText = `Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
   }, 1000);
 }
-
