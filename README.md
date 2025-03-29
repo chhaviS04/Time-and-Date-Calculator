@@ -60,7 +60,7 @@ The Date and Time Calculator is a versatile web application that enables users t
 To get a local copy of the project up and running, follow these steps:
 
 ### 1. Clone the Repository
-git clone https://github.com/chhaviS04/time_date_calculator.git
+git clone https://github.com/chhaviS04/Time-and-Date-Calculator.git
 cd time_date_calculator
 
 ### 2. Open index.html
